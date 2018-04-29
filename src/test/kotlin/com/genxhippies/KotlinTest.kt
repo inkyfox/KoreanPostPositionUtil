@@ -3,7 +3,7 @@ package com.genxhippies
 import org.junit.Assert
 import org.junit.Test
 
-internal class KoreanPostPositionUtilTest {
+internal class KotlinTest {
     @Test
     fun 종성_없는_한글() {
         Assert.assertEquals("용하는", "용하".은는)
