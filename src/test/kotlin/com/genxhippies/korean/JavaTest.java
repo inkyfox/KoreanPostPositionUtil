@@ -84,12 +84,14 @@ public class JavaTest {
 
     @Test
     public void 빈_문자열() {
-        Assert.assertEquals("\"\"은", KoUtils.은는(""));
-        Assert.assertEquals("\"\"이", KoUtils.이가(""));
-        Assert.assertEquals("\"\"을", KoUtils.을를(""));
-        Assert.assertEquals("\"\"과", KoUtils.과와(""));
-        Assert.assertEquals("\"\"이여", KoUtils.이여(""));
-        Assert.assertEquals("\"\"으로", KoUtils.으로(""));
+        Assert.assertEquals("[]은", KoUtils.은는(""));
+        Assert.assertEquals("[]이", KoUtils.이가(""));
+        Assert.assertEquals("[]을", KoUtils.을를(""));
+        Assert.assertEquals("[]과", KoUtils.과와(""));
+        Assert.assertEquals("[]이여", KoUtils.이여(""));
+        Assert.assertEquals("[]으로", KoUtils.으로(""));
+
+        Assert.assertEquals("[ ]은", KoUtils.은는(" "));
     }
 
     @Test
@@ -112,4 +114,21 @@ public class JavaTest {
         Assert.assertEquals("null로", KoUtils.으로(null));
     }
 
+    @Test
+    public void 특수문자() {
+        Assert.assertEquals("\"코틀린\"은", KoUtils.은는("\"코틀린\""));
+        Assert.assertEquals("\"자바\"는", KoUtils.은는("\"자바\""));
+        Assert.assertEquals("\"\"는", KoUtils.은는("\"\""));
+        Assert.assertEquals("\"는", KoUtils.은는("\""));
+
+        Assert.assertEquals("!는", KoUtils.은는("!"));
+        Assert.assertEquals(";은", KoUtils.은는(";"));
+    }
+
+    @Test
+    public void 괄호() {
+        Assert.assertEquals("코틀린(Kotlin)은", KoUtils.은는("코틀린(Kotlin)"));
+        Assert.assertEquals("자바(Java lang)는", KoUtils.은는("자바(Java lang)"));
+        Assert.assertEquals("(Kotlin)은(는)", KoUtils.은는("(Kotlin)"));
+    }
 }

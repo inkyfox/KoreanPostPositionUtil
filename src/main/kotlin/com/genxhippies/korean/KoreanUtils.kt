@@ -11,15 +11,15 @@ private enum class 종성종류 {
     companion object {
         fun 기본_종성(c: Char): 종성종류 = when (c) {
             in '가'..'힇' -> if ((c.toInt() - 0xAC00) % 28 > 0) 종성종류.있음 else 종성종류.없음
-            in "136780" -> 종성종류.있음
-            in "2459aeiouwy" -> 종성종류.없음
+            in "136780;" -> 종성종류.있음
+            in "2459aeiouwy\"'-!?" -> 종성종류.없음
             else -> 종성종류.모름
         }
 
         fun 리을_아닌_종성(c: Char): 종성종류 = when (c) {
             in '가'..'힇' -> ((c.toInt() - 0xAC00) % 28).let { if (it != 0 && it != 8) 종성종류.있음 else 종성종류.없음 }
-            in "360" -> 종성종류.있음
-            in "1245789aeiouwy" -> 종성종류.없음
+            in "360;" -> 종성종류.있음
+            in "1245789aeiouwy\"'-!?" -> 종성종류.없음
             else -> 종성종류.모름
         }
     }
@@ -47,10 +47,25 @@ private enum class 조사(
 
 }
 
-private fun String.lastLetter(): Char? = trim().let { predefinedPronounciations.getOrDefault(it, it) }.lastOrNull()
+private fun String.lastLetter(): Char? =
+        trim().let { predefinedPronounciations.getOrDefault(it, it) }.run {
+            lastOrNull()?.let {c ->
+                when (c) {
+                    in "\"';-!?" -> if (length > 1) get(lastIndex - 1) else c
+                    ')' -> lastIndexOf('(').let {
+                        when {
+                            it > 0 -> get(it - 1)
+                            length > 1 -> get(lastIndex - 1)
+                            else -> c
+                        }
+                    }
+                    else -> c
+                }
+            }
+        }
 
 private infix fun String.append(조사: 조사): String =
-        lastLetter()?.let { this + 조사.of(it) } ?: "\"$this\"${조사.종성_있는_조사}"
+        lastLetter()?.let { this + 조사.of(it) } ?: "[$this]${조사.종성_있는_조사}"
 
 val Any?.은는 @JvmName("은는") get() = toString().append(조사.은는)
 val Any?.이가 @JvmName("이가") get() = toString().append(조사.이가)

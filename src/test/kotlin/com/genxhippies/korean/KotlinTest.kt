@@ -83,12 +83,14 @@ internal class KotlinTest {
 
     @Test
     fun 빈_문자열() {
-        Assert.assertEquals("\"\"은", "".은는)
-        Assert.assertEquals("\"\"이", "".이가)
-        Assert.assertEquals("\"\"을", "".을를)
-        Assert.assertEquals("\"\"과", "".과와)
-        Assert.assertEquals("\"\"이여", "".이여)
-        Assert.assertEquals("\"\"으로", "".으로)
+        Assert.assertEquals("[]은", "".은는)
+        Assert.assertEquals("[]이", "".이가)
+        Assert.assertEquals("[]을", "".을를)
+        Assert.assertEquals("[]과", "".과와)
+        Assert.assertEquals("[]이여", "".이여)
+        Assert.assertEquals("[]으로", "".으로)
+
+        Assert.assertEquals("[ ]은", " ".은는)
     }
     
     @Test
@@ -111,4 +113,21 @@ internal class KotlinTest {
         Assert.assertEquals("null로", null.으로)
     }
 
+    @Test
+    fun 특수문자() {
+        Assert.assertEquals("\"코틀린\"은", "\"코틀린\"".은는)
+        Assert.assertEquals("\"자바\"는", "\"자바\"".은는)
+        Assert.assertEquals("\"\"는", "\"\"".은는)
+        Assert.assertEquals("\"는", "\"".은는)
+
+        Assert.assertEquals("!는", "!".은는)
+        Assert.assertEquals(";은", ";".은는)
+    }
+
+    @Test
+    fun 괄호() {
+        Assert.assertEquals("코틀린(Kotlin)은", "코틀린(Kotlin)".은는)
+        Assert.assertEquals("자바(Java lang)는", "자바(Java lang)".은는)
+        Assert.assertEquals("(Kotlin)은(는)", "(Kotlin)".은는)
+    }
 }
