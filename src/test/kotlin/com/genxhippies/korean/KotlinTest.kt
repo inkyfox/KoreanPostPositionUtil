@@ -1,4 +1,4 @@
-package com.genxhippies
+package com.genxhippies.korean
 
 import org.junit.Assert
 import org.junit.Test

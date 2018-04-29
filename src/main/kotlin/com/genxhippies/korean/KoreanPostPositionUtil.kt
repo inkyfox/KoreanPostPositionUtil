@@ -1,5 +1,5 @@
 @file:JvmName("KoreanUtils")
-package com.genxhippies
+package com.genxhippies.korean
 
 private fun String?.postPosition(종성_있는_조사: String, 종성_없는_조사: String): String =
         if (this == null) "${toString()}$종성_있는_조사"
