@@ -36,14 +36,14 @@
     <distributionManagement>
         <repository>
             <id>korean-post-position-util</id>
-            <url>https://api.bintray.com/maven/inkyfox/KoreanPostPositionUtil/korean-post-position-util/;publish=1</url>
+            <url>https://api.bintray.com/maven/inkyfox/kotlin-utils/korean-post-position-util/;publish=1</url>
         </repository>
     </distributionManagement>
 
     <properties>
         <kotlin.version>1.2.30</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
-        <main.class>com.genxhippies.KoreanPostPositionUtilKt</main.class>
+        <main.class>com.genxhippies.korean.KoUtils</main.class>
     </properties>
 
     <dependencies>
@@ -83,16 +83,33 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>${main.class}</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- GPG sign -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
