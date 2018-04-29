@@ -33,6 +33,7 @@ public class JavaTest {
         Assert.assertEquals("Yongha를", KoreanUtils.을를("Yongha"));
         Assert.assertEquals("Yongha와", KoreanUtils.과와("Yongha"));
         Assert.assertEquals("Yongha여", KoreanUtils.이여("Yongha"));
+        Assert.assertEquals("Yongha로", KoreanUtils.으로_로("Yongha"));
     }
 
     @Test
@@ -52,12 +53,43 @@ public class JavaTest {
     }
 
     @Test
+    public void 종성_없거나_리을인_한글() {
+        Assert.assertEquals("용하로", KoreanUtils.으로_로("용하"));
+        Assert.assertEquals("소율로", KoreanUtils.으로_로("소율"));
+    }
+
+    @Test
+    public void 리을아닌_종성인_한글() {
+        Assert.assertEquals("코틀린으로", KoreanUtils.으로_로("코틀린"));
+    }
+
+    @Test
+    public void 종성_없거나_리을인_숫자() {
+        Assert.assertEquals("1로", KoreanUtils.으로_로("1"));
+        Assert.assertEquals("2로", KoreanUtils.으로_로("2"));
+        Assert.assertEquals("4로", KoreanUtils.으로_로("4"));
+        Assert.assertEquals("5로", KoreanUtils.으로_로("5"));
+        Assert.assertEquals("7로", KoreanUtils.으로_로("7"));
+        Assert.assertEquals("8로", KoreanUtils.으로_로("8"));
+        Assert.assertEquals("9로", KoreanUtils.으로_로("9"));
+    }
+
+    @Test
+    public void 리을아닌_종성인_숫자() {
+        Assert.assertEquals("3으로", KoreanUtils.으로_로("3"));
+        Assert.assertEquals("6으로", KoreanUtils.으로_로("6"));
+        Assert.assertEquals("0으로", KoreanUtils.으로_로("0"));
+        Assert.assertEquals("10으로", KoreanUtils.으로_로("10"));
+    }
+
+    @Test
     public void 빈_문자열() {
         Assert.assertEquals("''은", KoreanUtils.은는(""));
         Assert.assertEquals("''이", KoreanUtils.이가(""));
         Assert.assertEquals("''을", KoreanUtils.을를(""));
         Assert.assertEquals("''과", KoreanUtils.과와(""));
         Assert.assertEquals("''이여", KoreanUtils.이여(""));
+        Assert.assertEquals("''으로", KoreanUtils.으로_로(""));
     }
 
     @Test
@@ -68,6 +100,7 @@ public class JavaTest {
         Assert.assertEquals("Soyul을(를)", KoreanUtils.을를("Soyul"));
         Assert.assertEquals("Soyul과(와)", KoreanUtils.과와("Soyul"));
         Assert.assertEquals("Soyul이여(여)", KoreanUtils.이여("Soyul"));
+        Assert.assertEquals("Soyul으로(로)", KoreanUtils.으로_로("Soyul"));
     }
 
     @Test
@@ -76,6 +109,7 @@ public class JavaTest {
         Assert.assertEquals("null이", KoreanUtils.이가(null));
         Assert.assertEquals("null을", KoreanUtils.을를(null));
         Assert.assertEquals("null과", KoreanUtils.과와(null));
+        Assert.assertEquals("null로", KoreanUtils.으로_로(null));
     }
 
 }
