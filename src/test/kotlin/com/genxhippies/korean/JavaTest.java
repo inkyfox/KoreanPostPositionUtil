@@ -7,109 +7,109 @@ public class JavaTest {
 
     @Test
     public void 종성_없는_한글() {
-        Assert.assertEquals("용하는", KoreanUtils.은는("용하"));
-        Assert.assertEquals("용하가", KoreanUtils.이가("용하"));
-        Assert.assertEquals("용하가", KoreanUtils.이가_가("용하"));
-        Assert.assertEquals("용하를", KoreanUtils.을를("용하"));
-        Assert.assertEquals("용하와", KoreanUtils.과와("용하"));
-        Assert.assertEquals("용하여", KoreanUtils.이여("용하"));
+        Assert.assertEquals("용하는", KoUtils.은는("용하"));
+        Assert.assertEquals("용하가", KoUtils.이가("용하"));
+        Assert.assertEquals("용하가", KoUtils.이가_가("용하"));
+        Assert.assertEquals("용하를", KoUtils.을를("용하"));
+        Assert.assertEquals("용하와", KoUtils.과와("용하"));
+        Assert.assertEquals("용하여", KoUtils.이여("용하"));
     }
 
     @Test
     public void 종성_있는_한글() {
-        Assert.assertEquals("소율은", KoreanUtils.은는("소율"));
-        Assert.assertEquals("소율이", KoreanUtils.이가("소율"));
-        Assert.assertEquals("소율이가", KoreanUtils.이가_가("소율"));
-        Assert.assertEquals("소율을", KoreanUtils.을를("소율"));
-        Assert.assertEquals("소율과", KoreanUtils.과와("소율"));
-        Assert.assertEquals("소율이여", KoreanUtils.이여("소율"));
+        Assert.assertEquals("소율은", KoUtils.은는("소율"));
+        Assert.assertEquals("소율이", KoUtils.이가("소율"));
+        Assert.assertEquals("소율이가", KoUtils.이가_가("소율"));
+        Assert.assertEquals("소율을", KoUtils.을를("소율"));
+        Assert.assertEquals("소율과", KoUtils.과와("소율"));
+        Assert.assertEquals("소율이여", KoUtils.이여("소율"));
     }
 
     @Test
     public void 종성_없는_영문() {
-        Assert.assertEquals("Yongha는", KoreanUtils.은는("Yongha"));
-        Assert.assertEquals("Yongha가", KoreanUtils.이가("Yongha"));
-        Assert.assertEquals("Yongha가", KoreanUtils.이가_가("Yongha"));
-        Assert.assertEquals("Yongha를", KoreanUtils.을를("Yongha"));
-        Assert.assertEquals("Yongha와", KoreanUtils.과와("Yongha"));
-        Assert.assertEquals("Yongha여", KoreanUtils.이여("Yongha"));
-        Assert.assertEquals("Yongha로", KoreanUtils.으로_로("Yongha"));
+        Assert.assertEquals("Yongha는", KoUtils.은는("Yongha"));
+        Assert.assertEquals("Yongha가", KoUtils.이가("Yongha"));
+        Assert.assertEquals("Yongha가", KoUtils.이가_가("Yongha"));
+        Assert.assertEquals("Yongha를", KoUtils.을를("Yongha"));
+        Assert.assertEquals("Yongha와", KoUtils.과와("Yongha"));
+        Assert.assertEquals("Yongha여", KoUtils.이여("Yongha"));
+        Assert.assertEquals("Yongha로", KoUtils.으로("Yongha"));
     }
 
     @Test
     public void 종성_없는_숫자() {
-        Assert.assertEquals("12는", KoreanUtils.은는("12"));
-        Assert.assertEquals("12가", KoreanUtils.이가("12"));
-        Assert.assertEquals("12를", KoreanUtils.을를("12"));
-        Assert.assertEquals("12와", KoreanUtils.과와("12"));
+        Assert.assertEquals("12는", KoUtils.은는("12"));
+        Assert.assertEquals("12가", KoUtils.이가("12"));
+        Assert.assertEquals("12를", KoUtils.을를("12"));
+        Assert.assertEquals("12와", KoUtils.과와("12"));
     }
 
     @Test
     public void 종성_있는_숫자() {
-        Assert.assertEquals("123은", KoreanUtils.은는("123"));
-        Assert.assertEquals("123이", KoreanUtils.이가("123"));
-        Assert.assertEquals("123을", KoreanUtils.을를("123"));
-        Assert.assertEquals("123과", KoreanUtils.과와("123"));
+        Assert.assertEquals("123은", KoUtils.은는("123"));
+        Assert.assertEquals("123이", KoUtils.이가("123"));
+        Assert.assertEquals("123을", KoUtils.을를("123"));
+        Assert.assertEquals("123과", KoUtils.과와("123"));
     }
 
     @Test
     public void 종성_없거나_리을인_한글() {
-        Assert.assertEquals("용하로", KoreanUtils.으로_로("용하"));
-        Assert.assertEquals("소율로", KoreanUtils.으로_로("소율"));
+        Assert.assertEquals("용하로", KoUtils.으로("용하"));
+        Assert.assertEquals("소율로", KoUtils.으로("소율"));
     }
 
     @Test
     public void 리을아닌_종성인_한글() {
-        Assert.assertEquals("코틀린으로", KoreanUtils.으로_로("코틀린"));
+        Assert.assertEquals("코틀린으로", KoUtils.으로("코틀린"));
     }
 
     @Test
     public void 종성_없거나_리을인_숫자() {
-        Assert.assertEquals("1로", KoreanUtils.으로_로("1"));
-        Assert.assertEquals("2로", KoreanUtils.으로_로("2"));
-        Assert.assertEquals("4로", KoreanUtils.으로_로("4"));
-        Assert.assertEquals("5로", KoreanUtils.으로_로("5"));
-        Assert.assertEquals("7로", KoreanUtils.으로_로("7"));
-        Assert.assertEquals("8로", KoreanUtils.으로_로("8"));
-        Assert.assertEquals("9로", KoreanUtils.으로_로("9"));
+        Assert.assertEquals("1로", KoUtils.으로("1"));
+        Assert.assertEquals("2로", KoUtils.으로("2"));
+        Assert.assertEquals("4로", KoUtils.으로("4"));
+        Assert.assertEquals("5로", KoUtils.으로("5"));
+        Assert.assertEquals("7로", KoUtils.으로("7"));
+        Assert.assertEquals("8로", KoUtils.으로("8"));
+        Assert.assertEquals("9로", KoUtils.으로("9"));
     }
 
     @Test
     public void 리을아닌_종성인_숫자() {
-        Assert.assertEquals("3으로", KoreanUtils.으로_로("3"));
-        Assert.assertEquals("6으로", KoreanUtils.으로_로("6"));
-        Assert.assertEquals("0으로", KoreanUtils.으로_로("0"));
-        Assert.assertEquals("10으로", KoreanUtils.으로_로("10"));
+        Assert.assertEquals("3으로", KoUtils.으로("3"));
+        Assert.assertEquals("6으로", KoUtils.으로("6"));
+        Assert.assertEquals("0으로", KoUtils.으로("0"));
+        Assert.assertEquals("10으로", KoUtils.으로("10"));
     }
 
     @Test
     public void 빈_문자열() {
-        Assert.assertEquals("''은", KoreanUtils.은는(""));
-        Assert.assertEquals("''이", KoreanUtils.이가(""));
-        Assert.assertEquals("''을", KoreanUtils.을를(""));
-        Assert.assertEquals("''과", KoreanUtils.과와(""));
-        Assert.assertEquals("''이여", KoreanUtils.이여(""));
-        Assert.assertEquals("''으로", KoreanUtils.으로_로(""));
+        Assert.assertEquals("\"\"은", KoUtils.은는(""));
+        Assert.assertEquals("\"\"이", KoUtils.이가(""));
+        Assert.assertEquals("\"\"을", KoUtils.을를(""));
+        Assert.assertEquals("\"\"과", KoUtils.과와(""));
+        Assert.assertEquals("\"\"이여", KoUtils.이여(""));
+        Assert.assertEquals("\"\"으로", KoUtils.으로(""));
     }
 
     @Test
     public void 알_수_없는_문자열() {
-        Assert.assertEquals("Soyul은(는)", KoreanUtils.은는("Soyul"));
-        Assert.assertEquals("Soyul이(가)", KoreanUtils.이가("Soyul"));
-        Assert.assertEquals("Soyul이가(가)", KoreanUtils.이가_가("Soyul"));
-        Assert.assertEquals("Soyul을(를)", KoreanUtils.을를("Soyul"));
-        Assert.assertEquals("Soyul과(와)", KoreanUtils.과와("Soyul"));
-        Assert.assertEquals("Soyul이여(여)", KoreanUtils.이여("Soyul"));
-        Assert.assertEquals("Soyul으로(로)", KoreanUtils.으로_로("Soyul"));
+        Assert.assertEquals("Soyul은(는)", KoUtils.은는("Soyul"));
+        Assert.assertEquals("Soyul이(가)", KoUtils.이가("Soyul"));
+        Assert.assertEquals("Soyul(이)가", KoUtils.이가_가("Soyul"));
+        Assert.assertEquals("Soyul을(를)", KoUtils.을를("Soyul"));
+        Assert.assertEquals("Soyul과(와)", KoUtils.과와("Soyul"));
+        Assert.assertEquals("Soyul(이)여", KoUtils.이여("Soyul"));
+        Assert.assertEquals("Soyul(으)로", KoUtils.으로("Soyul"));
     }
 
     @Test
     public void null_문자열() {
-        Assert.assertEquals("null은", KoreanUtils.은는(null));
-        Assert.assertEquals("null이", KoreanUtils.이가(null));
-        Assert.assertEquals("null을", KoreanUtils.을를(null));
-        Assert.assertEquals("null과", KoreanUtils.과와(null));
-        Assert.assertEquals("null로", KoreanUtils.으로_로(null));
+        Assert.assertEquals("null은", KoUtils.은는(null));
+        Assert.assertEquals("null이", KoUtils.이가(null));
+        Assert.assertEquals("null을", KoUtils.을를(null));
+        Assert.assertEquals("null과", KoUtils.과와(null));
+        Assert.assertEquals("null로", KoUtils.으로(null));
     }
 
 }

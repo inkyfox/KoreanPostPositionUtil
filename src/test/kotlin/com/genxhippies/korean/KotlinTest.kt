@@ -32,7 +32,7 @@ internal class KotlinTest {
         Assert.assertEquals("Yongha를", "Yongha".을를)
         Assert.assertEquals("Yongha와", "Yongha".과와)
         Assert.assertEquals("Yongha여", "Yongha".이여)
-        Assert.assertEquals("Yongha로", "Yongha".으로_로)
+        Assert.assertEquals("Yongha로", "Yongha".으로)
     }
 
     @Test
@@ -53,53 +53,53 @@ internal class KotlinTest {
 
     @Test
     fun 종성_없거나_리을인_한글() {
-        Assert.assertEquals("용하로", "용하".으로_로)
-        Assert.assertEquals("소율로", "소율".으로_로)
+        Assert.assertEquals("용하로", "용하".으로)
+        Assert.assertEquals("소율로", "소율".으로)
     }
 
     @Test
     fun 리을아닌_종성인_한글() {
-        Assert.assertEquals("코틀린으로", "코틀린".으로_로)
+        Assert.assertEquals("코틀린으로", "코틀린".으로)
     }
 
     @Test
     fun 종성_없거나_리을인_숫자() {
-        Assert.assertEquals("1로", "1".으로_로)
-        Assert.assertEquals("2로", "2".으로_로)
-        Assert.assertEquals("4로", "4".으로_로)
-        Assert.assertEquals("5로", "5".으로_로)
-        Assert.assertEquals("7로", "7".으로_로)
-        Assert.assertEquals("8로", "8".으로_로)
-        Assert.assertEquals("9로", "9".으로_로)
+        Assert.assertEquals("1로", "1".으로)
+        Assert.assertEquals("2로", "2".으로)
+        Assert.assertEquals("4로", "4".으로)
+        Assert.assertEquals("5로", "5".으로)
+        Assert.assertEquals("7로", "7".으로)
+        Assert.assertEquals("8로", "8".으로)
+        Assert.assertEquals("9로", "9".으로)
     }
 
     @Test
     fun 리을아닌_종성인_숫자() {
-        Assert.assertEquals("3으로", "3".으로_로)
-        Assert.assertEquals("6으로", "6".으로_로)
-        Assert.assertEquals("0으로", "0".으로_로)
-        Assert.assertEquals("10으로", "10".으로_로)
+        Assert.assertEquals("3으로", "3".으로)
+        Assert.assertEquals("6으로", "6".으로)
+        Assert.assertEquals("0으로", "0".으로)
+        Assert.assertEquals("10으로", "10".으로)
     }
 
     @Test
     fun 빈_문자열() {
-        Assert.assertEquals("''은", "".은는)
-        Assert.assertEquals("''이", "".이가)
-        Assert.assertEquals("''을", "".을를)
-        Assert.assertEquals("''과", "".과와)
-        Assert.assertEquals("''이여", "".이여)
-        Assert.assertEquals("''으로", "".으로_로)
+        Assert.assertEquals("\"\"은", "".은는)
+        Assert.assertEquals("\"\"이", "".이가)
+        Assert.assertEquals("\"\"을", "".을를)
+        Assert.assertEquals("\"\"과", "".과와)
+        Assert.assertEquals("\"\"이여", "".이여)
+        Assert.assertEquals("\"\"으로", "".으로)
     }
     
     @Test
     fun 알_수_없는_문자열() {
         Assert.assertEquals("Soyul은(는)", "Soyul".은는)
         Assert.assertEquals("Soyul이(가)", "Soyul".이가)
-        Assert.assertEquals("Soyul이가(가)", "Soyul".이가_가)
+        Assert.assertEquals("Soyul(이)가", "Soyul".이가_가)
         Assert.assertEquals("Soyul을(를)", "Soyul".을를)
         Assert.assertEquals("Soyul과(와)", "Soyul".과와)
-        Assert.assertEquals("Soyul이여(여)", "Soyul".이여)
-        Assert.assertEquals("Soyul으로(로)", "Soyul".으로_로)
+        Assert.assertEquals("Soyul(이)여", "Soyul".이여)
+        Assert.assertEquals("Soyul(으)로", "Soyul".으로)
     }
 
     @Test
@@ -108,7 +108,7 @@ internal class KotlinTest {
         Assert.assertEquals("null이", null.이가)
         Assert.assertEquals("null을", null.을를)
         Assert.assertEquals("null과", null.과와)
-        Assert.assertEquals("null로", null.으로_로)
+        Assert.assertEquals("null로", null.으로)
     }
 
 }
