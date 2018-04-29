@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.genxhippies</groupId>
-    <artifactId>KoreanPostPositionUtil</artifactId>
+    <artifactId>korean-post-position-util</artifactId>
     <version>1.0.0</version>
 
     <properties>
