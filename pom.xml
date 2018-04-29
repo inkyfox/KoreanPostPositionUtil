@@ -35,8 +35,9 @@
 
     <distributionManagement>
         <repository>
-            <id>korean-post-position-util</id>
-            <url>https://api.bintray.com/maven/inkyfox/kotlin-utils/korean-post-position-util/;publish=1</url>
+            <id>bintray-inkyfox-kotlin_utils</id>
+            <name>inkyfox-kotlin_utils</name>
+            <url>https://api.bintray.com/maven/inkyfox/kotlin_utils/korean-post-position-util/;publish=1</url>
         </repository>
     </distributionManagement>
 
