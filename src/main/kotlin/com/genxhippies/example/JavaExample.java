@@ -11,6 +11,5 @@ public class JavaExample {
         System.out.println(KoUtils.으로(name) + " 가고 있습니다.");
         System.out.println(KoUtils.이여(name) + "! 창문을 열어다오.");
 
-        System.out.println(KoUtils.이_가(name) + " 좋습니다.");
     }
 }

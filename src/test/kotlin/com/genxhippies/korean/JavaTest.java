@@ -13,10 +13,7 @@ public class JavaTest {
         Assert.assertEquals("용하와", KoUtils.과와("용하"));
         Assert.assertEquals("용하여", KoUtils.이여("용하"));
 
-        Assert.assertEquals("용하는", KoUtils.이_는("용하"));
-        Assert.assertEquals("용하가", KoUtils.이_가("용하"));
-        Assert.assertEquals("용하를", KoUtils.이_를("용하"));
-        Assert.assertEquals("용하와", KoUtils.이_와("용하"));
+        Assert.assertEquals("용하는", KoUtils.은는(KoUtils._이("용하")));
     }
 
     @Test
@@ -27,10 +24,7 @@ public class JavaTest {
         Assert.assertEquals("소율과", KoUtils.과와("소율"));
         Assert.assertEquals("소율이여", KoUtils.이여("소율"));
 
-        Assert.assertEquals("소율이는", KoUtils.이_는("소율"));
-        Assert.assertEquals("소율이가", KoUtils.이_가("소율"));
-        Assert.assertEquals("소율이를", KoUtils.이_를("소율"));
-        Assert.assertEquals("소율이와", KoUtils.이_와("소율"));
+        Assert.assertEquals("소율이는", KoUtils.은는(KoUtils._이("소율")));
     }
 
     @Test
@@ -42,10 +36,7 @@ public class JavaTest {
         Assert.assertEquals("Yongha여", KoUtils.이여("Yongha"));
         Assert.assertEquals("Yongha로", KoUtils.으로("Yongha"));
 
-        Assert.assertEquals("Yongha는", KoUtils.이_는("Yongha"));
-        Assert.assertEquals("Yongha가", KoUtils.이_가("Yongha"));
-        Assert.assertEquals("Yongha를", KoUtils.이_를("Yongha"));
-        Assert.assertEquals("Yongha와", KoUtils.이_와("Yongha"));
+        Assert.assertEquals("Yongha는", KoUtils.은는(KoUtils._이("Yongha")));
     }
 
     @Test
@@ -115,10 +106,7 @@ public class JavaTest {
         Assert.assertEquals("Soyul(이)여", KoUtils.이여("Soyul"));
         Assert.assertEquals("Soyul(으)로", KoUtils.으로("Soyul"));
 
-        Assert.assertEquals("Soyul(이)는", KoUtils.이_는("Soyul"));
-        Assert.assertEquals("Soyul(이)가", KoUtils.이_가("Soyul"));
-        Assert.assertEquals("Soyul(이)를", KoUtils.이_를("Soyul"));
-        Assert.assertEquals("Soyul(이)와", KoUtils.이_와("Soyul"));
+        Assert.assertEquals("Soyul(이)는", KoUtils.은는(KoUtils._이("Soyul")));
     }
 
     @Test

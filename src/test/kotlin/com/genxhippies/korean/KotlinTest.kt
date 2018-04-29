@@ -12,10 +12,8 @@ internal class KotlinTest {
         Assert.assertEquals("용하와", "용하".과와)
         Assert.assertEquals("용하여", "용하".이여)
 
-        Assert.assertEquals("용하는", "용하".이_는)
-        Assert.assertEquals("용하가", "용하".이_가)
-        Assert.assertEquals("용하를", "용하".이_를)
-        Assert.assertEquals("용하와", "용하".이_와)
+        Assert.assertEquals("용하는", "용하"._이.는)
+        Assert.assertEquals("용하는", "용하".`(이)`.는)
     }
 
     @Test
@@ -26,10 +24,8 @@ internal class KotlinTest {
         Assert.assertEquals("소율과", "소율".과와)
         Assert.assertEquals("소율이여", "소율".이여)
 
-        Assert.assertEquals("소율이는", "소율".이_는)
-        Assert.assertEquals("소율이가", "소율".이_가)
-        Assert.assertEquals("소율이를", "소율".이_를)
-        Assert.assertEquals("소율이와", "소율".이_와)
+        Assert.assertEquals("소율이는", "소율"._이.는)
+        Assert.assertEquals("소율이는", "소율".`(이)`.는)
     }
 
     @Test
@@ -41,10 +37,8 @@ internal class KotlinTest {
         Assert.assertEquals("Yongha여", "Yongha".이여)
         Assert.assertEquals("Yongha로", "Yongha".으로)
 
-        Assert.assertEquals("Yongha는", "Yongha".이_는)
-        Assert.assertEquals("Yongha가", "Yongha".이_가)
-        Assert.assertEquals("Yongha를", "Yongha".이_를)
-        Assert.assertEquals("Yongha와", "Yongha".이_와)
+        Assert.assertEquals("Yongha는", "Yongha"._이.는)
+        Assert.assertEquals("Yongha는", "Yongha".`(이)`.는)
     }
 
     @Test
@@ -114,10 +108,8 @@ internal class KotlinTest {
         Assert.assertEquals("Soyul(이)여", "Soyul".이여)
         Assert.assertEquals("Soyul(으)로", "Soyul".으로)
 
-        Assert.assertEquals("Soyul(이)는", "Soyul".이_는)
-        Assert.assertEquals("Soyul(이)가", "Soyul".이_가)
-        Assert.assertEquals("Soyul(이)를", "Soyul".이_를)
-        Assert.assertEquals("Soyul(이)와", "Soyul".이_와)
+        Assert.assertEquals("Soyul(이)는", "Soyul"._이.는)
+        Assert.assertEquals("Soyul(이)는", "Soyul".`(이)`.는)
     }
 
     @Test
@@ -132,7 +124,11 @@ internal class KotlinTest {
     @Test
     fun 특수문자() {
         Assert.assertEquals("\"코틀린\"은", "\"코틀린\"".은는)
+        Assert.assertEquals("\" 코틀린 \"은", "\" 코틀린 \"".은는)
+
         Assert.assertEquals("\"자바\"는", "\"자바\"".은는)
+        Assert.assertEquals("\" 자바 \"는", "\" 자바 \"".은는)
+
         Assert.assertEquals("\"\"는", "\"\"".은는)
         Assert.assertEquals("\"는", "\"".은는)
 
@@ -143,8 +139,29 @@ internal class KotlinTest {
     @Test
     fun 괄호() {
         Assert.assertEquals("코틀린(Kotlin)은", "코틀린(Kotlin)".은는)
+        Assert.assertEquals("코틀린 (Kotlin)은", "코틀린 (Kotlin)".은는)
+        Assert.assertEquals("코틀린()은", "코틀린()".은는)
+        Assert.assertEquals("코틀린 ()은", "코틀린 ()".은는)
+
         Assert.assertEquals("자바(Java lang)는", "자바(Java lang)".은는)
+        Assert.assertEquals("자바 (Java lang)는", "자바 (Java lang)".은는)
+        Assert.assertEquals("자바()는", "자바()".은는)
+        Assert.assertEquals("자바 ()는", "자바 ()".은는)
+
+        Assert.assertEquals("(코틀린)은", "(코틀린)".은는)
+        Assert.assertEquals("( 코틀린 )은", "( 코틀린 )".은는)
+
+        Assert.assertEquals("(자바)는", "(자바)".은는)
+        Assert.assertEquals("( 자바 )는", "( 자바 )".은는)
+
         Assert.assertEquals("(Kotlin)은(는)", "(Kotlin)".은는)
+        Assert.assertEquals("(Kotlin)은(는)", "(Kotlin)".은는)
+
+        Assert.assertEquals("()은(는)", "()".은는)
+
+        Assert.assertEquals("Soyul(이)는", "Soyul(이)".은는)
+        Assert.assertEquals("코틀린(이)는", "코틀린(이)".은는)
+        Assert.assertEquals("(이)는", "(이)".은는)
     }
 
     @Test

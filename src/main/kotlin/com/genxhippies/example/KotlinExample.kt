@@ -11,6 +11,5 @@ class KotlinExample {
         println("${name.으로} 가고 있습니다.")
         println("${name.이여}! 창문을 열어다오.")
 
-        println("${name.이_가} 좋습니다.")
     }
 }
