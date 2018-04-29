@@ -12,6 +12,7 @@ internal class KotlinTest {
         Assert.assertEquals("용하를", "용하".을를)
         Assert.assertEquals("용하와", "용하".과와)
         Assert.assertEquals("용하여", "용하".이여)
+        Assert.assertEquals("용하는", "용하".이는)
     }
 
     @Test
@@ -22,6 +23,7 @@ internal class KotlinTest {
         Assert.assertEquals("소율을", "소율".을를)
         Assert.assertEquals("소율과", "소율".과와)
         Assert.assertEquals("소율이여", "소율".이여)
+        Assert.assertEquals("소율이는", "소율".이는)
     }
 
     @Test

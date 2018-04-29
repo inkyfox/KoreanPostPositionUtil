@@ -13,6 +13,7 @@ public class JavaTest {
         Assert.assertEquals("용하를", KoUtils.을를("용하"));
         Assert.assertEquals("용하와", KoUtils.과와("용하"));
         Assert.assertEquals("용하여", KoUtils.이여("용하"));
+        Assert.assertEquals("용하는", KoUtils.이는("용하"));
     }
 
     @Test
@@ -23,6 +24,7 @@ public class JavaTest {
         Assert.assertEquals("소율을", KoUtils.을를("소율"));
         Assert.assertEquals("소율과", KoUtils.과와("소율"));
         Assert.assertEquals("소율이여", KoUtils.이여("소율"));
+        Assert.assertEquals("소율이는", KoUtils.이는("소율"));
     }
 
     @Test

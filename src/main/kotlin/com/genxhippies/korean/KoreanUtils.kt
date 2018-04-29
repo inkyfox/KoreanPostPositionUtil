@@ -37,14 +37,14 @@ private enum class 조사(
     과와("과", "와", "과(와)", 종성종류.Companion::기본_종성),
     이여("이여", "여", "(이)여", 종성종류.Companion::기본_종성),
     으로("으로", "로", "(으)로", 종성종류.Companion::리을_아닌_종성),
-    이가_가("이가", "가", "(이)가", 종성종류.Companion::기본_종성);
+    이가_가("이가", "가", "(이)가", 종성종류.Companion::기본_종성),
+    이는("이는", "는", "(이)는", 종성종류.Companion::기본_종성);
 
     fun of(letter: Char): String = when (종성_검사기(letter)) {
         종성종류.있음 -> 종성_있는_조사
         종성종류.없음 -> 종성_없는_조사
         종성종류.모름 -> 알_수_없을_때의_조사
     }
-
 }
 
 private fun String.lastLetter(): Char? =
@@ -74,6 +74,7 @@ val Any?.과와 @JvmName("과와") get() = toString().append(조사.과와)
 val Any?.이여 @JvmName("이여") get() = toString().append(조사.이여)
 val Any?.으로 @JvmName("으로") get() = toString().append(조사.으로)
 val Any?.이가_가 @JvmName("이가_가") get() = toString().append(조사.이가_가)
+val Any?.이는 @JvmName("이는") get() = toString().append(조사.이는)
 
 val Any?.는 get() = 은는
 val Any?.은 get() = 은는
