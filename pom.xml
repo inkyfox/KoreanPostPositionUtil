@@ -8,6 +8,38 @@
     <artifactId>korean-post-position-util</artifactId>
     <version>1.0.0</version>
 
+    <packaging>jar</packaging>
+
+    <name>Korean Post-Position Util</name>
+    <description>Kotlin Utility for Korean Hangul post-position letters</description>
+    <url>https://github.com/inkyfox/KoreanPostPositionUtil</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Yongha Yoo</name>
+            <email>inkyfox@oo-v.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/inkyfox/KoreanPostPositionUtil</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>korean-post-position-util</id>
+            <url>https://api.bintray.com/maven/inkyfox/KoreanPostPositionUtil/korean-post-position-util/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <kotlin.version>1.2.30</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
