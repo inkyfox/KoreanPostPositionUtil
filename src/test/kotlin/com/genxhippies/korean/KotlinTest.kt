@@ -130,4 +130,29 @@ internal class KotlinTest {
         Assert.assertEquals("자바(Java lang)는", "자바(Java lang)".은는)
         Assert.assertEquals("(Kotlin)은(는)", "(Kotlin)".은는)
     }
+
+    @Test
+    fun 숫자() {
+        Assert.assertEquals("1은", 1.은는)
+        Assert.assertEquals("2는", 2.은는)
+        Assert.assertEquals("3은", 3.은는)
+        Assert.assertEquals("4는", 4.은는)
+        Assert.assertEquals("5는", 5.은는)
+        Assert.assertEquals("6은", 6.은는)
+        Assert.assertEquals("7은", 7.은는)
+        Assert.assertEquals("8은", 8.은는)
+        Assert.assertEquals("9는", 9.은는)
+        Assert.assertEquals("10은", 10.은는)
+
+        Assert.assertEquals("1로", 1.으로)
+        Assert.assertEquals("2로", 2.으로)
+        Assert.assertEquals("3으로", 3.으로)
+        Assert.assertEquals("4로", 4.으로)
+        Assert.assertEquals("5로", 5.으로)
+        Assert.assertEquals("6으로", 6.으로)
+        Assert.assertEquals("7로", 7.으로)
+        Assert.assertEquals("8로", 8.으로)
+        Assert.assertEquals("9로", 9.으로)
+        Assert.assertEquals("10으로", 10.으로)
+    }
 }

@@ -131,4 +131,29 @@ public class JavaTest {
         Assert.assertEquals("자바(Java lang)는", KoUtils.은는("자바(Java lang)"));
         Assert.assertEquals("(Kotlin)은(는)", KoUtils.은는("(Kotlin)"));
     }
+
+    @Test
+    public void 숫자() {
+        Assert.assertEquals("1은", KoUtils.은는(1));
+        Assert.assertEquals("2는", KoUtils.은는(2));
+        Assert.assertEquals("3은", KoUtils.은는(3));
+        Assert.assertEquals("4는", KoUtils.은는(4));
+        Assert.assertEquals("5는", KoUtils.은는(5));
+        Assert.assertEquals("6은", KoUtils.은는(6));
+        Assert.assertEquals("7은", KoUtils.은는(7));
+        Assert.assertEquals("8은", KoUtils.은는(8));
+        Assert.assertEquals("9는", KoUtils.은는(9));
+        Assert.assertEquals("10은", KoUtils.은는(10));
+
+        Assert.assertEquals("1로", KoUtils.으로(1));
+        Assert.assertEquals("2로", KoUtils.으로(2));
+        Assert.assertEquals("3으로", KoUtils.으로(3));
+        Assert.assertEquals("4로", KoUtils.으로(4));
+        Assert.assertEquals("5로", KoUtils.으로(5));
+        Assert.assertEquals("6으로", KoUtils.으로(6));
+        Assert.assertEquals("7로", KoUtils.으로(7));
+        Assert.assertEquals("8로", KoUtils.으로(8));
+        Assert.assertEquals("9로", KoUtils.으로(9));
+        Assert.assertEquals("10으로", KoUtils.으로(10));
+    }
 }
