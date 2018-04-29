@@ -35,10 +35,15 @@ private enum class 조사(
     이가("이", "가", "이(가)", 종성종류.Companion::기본_종성),
     을를("을", "를", "을(를)", 종성종류.Companion::기본_종성),
     과와("과", "와", "과(와)", 종성종류.Companion::기본_종성),
+
     이여("이여", "여", "(이)여", 종성종류.Companion::기본_종성),
+
     으로("으로", "로", "(으)로", 종성종류.Companion::리을_아닌_종성),
-    이가_가("이가", "가", "(이)가", 종성종류.Companion::기본_종성),
-    이는("이는", "는", "(이)는", 종성종류.Companion::기본_종성);
+
+    이_는("이는", "는", "(이)는", 종성종류.Companion::기본_종성),
+    이_가("이가", "가", "(이)가", 종성종류.Companion::기본_종성),
+    이_를("이를", "를", "(이)를", 종성종류.Companion::기본_종성),
+    이_와("이와", "와", "(이)와", 종성종류.Companion::기본_종성);
 
     fun of(letter: Char): String = when (종성_검사기(letter)) {
         종성종류.있음 -> 종성_있는_조사
@@ -73,16 +78,19 @@ val Any?.을를 @JvmName("을를") get() = toString().append(조사.을를)
 val Any?.과와 @JvmName("과와") get() = toString().append(조사.과와)
 val Any?.이여 @JvmName("이여") get() = toString().append(조사.이여)
 val Any?.으로 @JvmName("으로") get() = toString().append(조사.으로)
-val Any?.이가_가 @JvmName("이가_가") get() = toString().append(조사.이가_가)
-val Any?.이는 @JvmName("이는") get() = toString().append(조사.이는)
 
-val Any?.는 get() = 은는
+val Any?.이_는 @JvmName("이_는") get() = toString().append(조사.이_는)
+val Any?.이_가 @JvmName("이_가") get() = toString().append(조사.이_가)
+val Any?.이_를 @JvmName("이_를") get() = toString().append(조사.이_를)
+val Any?.이_와 @JvmName("이_와") get() = toString().append(조사.이_와)
+
 val Any?.은 get() = 은는
-val Any?.가 get() = 이가
+val Any?.는 get() = 은는
 val Any?.이 get() = 이가
-val Any?.를 get() = 을를
+val Any?.가 get() = 이가
 val Any?.을 get() = 을를
-val Any?.와 get() = 과와
+val Any?.를 get() = 을를
 val Any?.과 get() = 과와
+val Any?.와 get() = 과와
 val Any?.여 get() = 이여
 val Any?.로 get() = 으로

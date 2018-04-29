@@ -8,33 +8,43 @@ internal class KotlinTest {
     fun 종성_없는_한글() {
         Assert.assertEquals("용하는", "용하".은는)
         Assert.assertEquals("용하가", "용하".이가)
-        Assert.assertEquals("용하가", "용하".이가_가)
         Assert.assertEquals("용하를", "용하".을를)
         Assert.assertEquals("용하와", "용하".과와)
         Assert.assertEquals("용하여", "용하".이여)
-        Assert.assertEquals("용하는", "용하".이는)
+
+        Assert.assertEquals("용하는", "용하".이_는)
+        Assert.assertEquals("용하가", "용하".이_가)
+        Assert.assertEquals("용하를", "용하".이_를)
+        Assert.assertEquals("용하와", "용하".이_와)
     }
 
     @Test
     fun 종성_있는_한글() {
         Assert.assertEquals("소율은", "소율".은는)
         Assert.assertEquals("소율이", "소율".이가)
-        Assert.assertEquals("소율이가", "소율".이가_가)
         Assert.assertEquals("소율을", "소율".을를)
         Assert.assertEquals("소율과", "소율".과와)
         Assert.assertEquals("소율이여", "소율".이여)
-        Assert.assertEquals("소율이는", "소율".이는)
+
+        Assert.assertEquals("소율이는", "소율".이_는)
+        Assert.assertEquals("소율이가", "소율".이_가)
+        Assert.assertEquals("소율이를", "소율".이_를)
+        Assert.assertEquals("소율이와", "소율".이_와)
     }
 
     @Test
     fun 종성_없는_영문() {
         Assert.assertEquals("Yongha는", "Yongha".은는)
         Assert.assertEquals("Yongha가", "Yongha".이가)
-        Assert.assertEquals("Yongha가", "Yongha".이가_가)
         Assert.assertEquals("Yongha를", "Yongha".을를)
         Assert.assertEquals("Yongha와", "Yongha".과와)
         Assert.assertEquals("Yongha여", "Yongha".이여)
         Assert.assertEquals("Yongha로", "Yongha".으로)
+
+        Assert.assertEquals("Yongha는", "Yongha".이_는)
+        Assert.assertEquals("Yongha가", "Yongha".이_가)
+        Assert.assertEquals("Yongha를", "Yongha".이_를)
+        Assert.assertEquals("Yongha와", "Yongha".이_와)
     }
 
     @Test
@@ -99,11 +109,15 @@ internal class KotlinTest {
     fun 알_수_없는_문자열() {
         Assert.assertEquals("Soyul은(는)", "Soyul".은는)
         Assert.assertEquals("Soyul이(가)", "Soyul".이가)
-        Assert.assertEquals("Soyul(이)가", "Soyul".이가_가)
         Assert.assertEquals("Soyul을(를)", "Soyul".을를)
         Assert.assertEquals("Soyul과(와)", "Soyul".과와)
         Assert.assertEquals("Soyul(이)여", "Soyul".이여)
         Assert.assertEquals("Soyul(으)로", "Soyul".으로)
+
+        Assert.assertEquals("Soyul(이)는", "Soyul".이_는)
+        Assert.assertEquals("Soyul(이)가", "Soyul".이_가)
+        Assert.assertEquals("Soyul(이)를", "Soyul".이_를)
+        Assert.assertEquals("Soyul(이)와", "Soyul".이_와)
     }
 
     @Test
