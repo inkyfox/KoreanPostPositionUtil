@@ -6,7 +6,7 @@
 
     <groupId>com.github.inkyfox</groupId>
     <artifactId>korean-post-position-util</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <packaging>jar</packaging>
 
@@ -32,6 +32,14 @@
     <scm>
         <url>https://github.com/inkyfox/KoreanPostPositionUtil</url>
     </scm>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <distributionManagement>
         <repository>
@@ -96,16 +104,16 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9</version>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>0.9.16</version>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
-                        <phase>verify</phase>
+                        <phase>prepare-package</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>javadocJar</goal>
                         </goals>
                     </execution>
                 </executions>
