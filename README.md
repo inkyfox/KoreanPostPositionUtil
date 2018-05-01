@@ -1,3 +1,5 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.inkyfox/korean-post-position-util/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.inkyfox/korean-post-position-util)
+
 # KoreanPostPositionUtil
 
 종성에 따른 한글 조사 (은/는, 이/가, 을/를, 과/와)를 붙여주는 코틀린 유틸리티 
@@ -9,6 +11,24 @@ Kotlin Utility for Korean Hangul post-position letters
 - 한글 뿐 아니라 숫자와 일부 영문도 지원한다.
 - `명사(설명).조사`의 형식에선 괄호를 무시한다.
 - 자바 코드에서도 사용할 수 있다.
+
+## Download
+
+Maven:
+
+``` xml
+<dependency>
+    <groupId>com.github.inkyfox</groupId>
+    <artifactId>korean-post-position-util</artifactId>
+    <version>1.0.3</version>
+</dependency>
+```
+
+Gradle:
+
+``` groovy
+compile 'com.github.inkyfox:korean-post-position-util:1.0.3'
+```
 
 ## import
 
